@@ -1,0 +1,75 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 80%;
+    background-color: var(--red);
+    margin: 0.5rem;
+    margin-left: 12rem;
+    margin-top: 1.4rem;
+    align-items: center;
+    align-self: center;
+    font-size: large;
+    color: white;
+
+}
+
+th, td {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: darkred;
+}
+
+tr:nth-child(even) {
+    background-color: var(--dark-red);
+}
+
+.servico {
+    width: auto;
+}
+
+.descricao {
+    width: fit-content;
+}
+
+.preco {
+    width: 5rem;
+}
+
+.inputServico {
+    width: 35%;
+    margin-left: 12rem;
+    background-color: var(--dark-red);
+    color: white;
+    border:0.2rem solid white;
+	border-radius:42px;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.adicionaButton {
+    background:linear-gradient(to bottom, var(--red) 5%, var(--dark-red) 100%);
+	background-color:var(--dark-red);
+	border:0.2rem solid white;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-weight:bold;
+	padding:14px 24px;
+	text-decoration:none;
+    margin-left: 12rem;
+    margin-top: 1rem;
+    width: 10%;
+}
+
+.adicionaButton:hover {
+    background:linear-gradient(to bottom, var(--dark-red)  5%, var(--red) 100%);
+	background-color:var(--red);
+}

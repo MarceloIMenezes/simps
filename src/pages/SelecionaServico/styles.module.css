@@ -1,28 +1,15 @@
-.inputCliente {
-    color: black;
-    margin: 0.5rem;
-    margin-left: 1.8rem;
-    margin-top: 1.4rem;
-    display: flexbox;
-    border: 1rem solid white;
-    border-radius: 24px;
-    font-size: 1rem;
-    width: 47%;
+.title {
+    color: white;
+    text-align: center;
+    background-color: var(--dark-red);
+    margin-top: 1rem;
+    margin-left: 12rem;
+    margin-right: 12rem;
+    border:0.2rem solid white;
+	border-radius:42px;
 }
 
-.bigInput {
-    width: 96%;
-}
-
-.smallInput {
-    width: 8.5%;
-}
-
-.mediumInput {
-    width: 41.5%;
-}
-
-.confirmaButton {
+.registraOrdem {
     background:linear-gradient(to bottom, var(--red) 5%, var(--dark-red) 100%);
 	background-color:var(--dark-red);
 	border:0.2rem solid white;
@@ -33,12 +20,12 @@
 	font-weight:bold;
 	padding:14px 24px;
 	text-decoration:none;
-    margin-left: 1.8rem;
+    margin-left: 12rem;
     margin-top: 1rem;
-    width: 50%;
+    width: 10%;
 }
 
-.confirmaButton:hover {
+.registraOrdem:hover {
     background:linear-gradient(to bottom, var(--dark-red)  5%, var(--red) 100%);
 	background-color:var(--red);
 }

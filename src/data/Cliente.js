@@ -27,6 +27,9 @@ export default class Cliente extends React.Component {
     alerta() {
         if (!this.valid()) {
             alert("Preencha todos os campos.");
+            return;
+        } else {
+            this.props.clientes.push(this.state);
         }
     }
 
@@ -53,7 +56,7 @@ export default class Cliente extends React.Component {
         return (
             <form>
                 <input
-                    className={styles.bigInput}
+                    className={styles.bigInput + ' ' + styles.inputCliente}
                     type="text"
                     name="nome"
                     placeholder="Nome Completo"
@@ -61,7 +64,7 @@ export default class Cliente extends React.Component {
                     onChange={e => this.handleChange(e.target)}
                 required/>
                 <input 
-                    className={styles.bigInput}
+                    className={styles.bigInput + ' ' + styles.inputCliente}
                     type="text"
                     name="endereco"
                     placeholder="Endereço"
@@ -69,7 +72,7 @@ export default class Cliente extends React.Component {
                     onChange={e => this.handleChange(e.target)}
                 required/>
                 <input
-                    className={styles.mediumInput} 
+                    className={styles.mediumInput + ' ' + styles.inputCliente} 
                     type="text"
                     name="bairro"
                     placeholder="Bairro"
@@ -77,7 +80,7 @@ export default class Cliente extends React.Component {
                     onChange={e => this.handleChange(e.target)}
                 required/>
                 <input
-                    className={styles.mediumInput} 
+                    className={styles.mediumInput + ' ' + styles.inputCliente} 
                     type="text"
                     name="cidade"
                     placeholder="Cidade"
@@ -85,35 +88,39 @@ export default class Cliente extends React.Component {
                     onChange={e => this.handleChange(e.target)}
                 required/>
                 <input 
-                    className={styles.smallInput}
+                    className={styles.smallInput + ' ' + styles.inputCliente}
                     type="text"
                     name="uf"
                     placeholder="UF"
                     value={this.state.uf}
                     onChange={e => this.handleChange(e.target)}
                 required/>
-                <input 
+                <input
+                    className={styles.inputCliente}
                     type="text"
                     name="cep"
                     placeholder="CEP"
                     value={this.state.cep}
                     onChange={e => this.handleChange(e.target)}
                 required/>
-                <input 
+                <input
+                    className={styles.inputCliente} 
                     type="text"
                     name="cpf"
                     placeholder="CPF"
                     value={this.state.cpf}
                     onChange={e => this.handleChange(e.target)}
                 required/>
-                <input 
+                <input
+                    className={styles.inputCliente} 
                     type="email"
                     name="email"
                     placeholder="E-mail"
                     value={this.state.email}
                     onChange={e => this.handleChange(e.target)}
                 required/>
-                <input 
+                <input
+                    className={styles.inputCliente} 
                     type="tel"
                     name="tel"
                     placeholder="Telefone"

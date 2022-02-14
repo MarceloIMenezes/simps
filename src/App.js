@@ -16,16 +16,21 @@ import Servicos from "./pages/Servicos/Servicos";
 import Ordens from "./pages/Ordens/Ordens";
 
 function App() {
+
+  var clientes = [];
+  var servicos = [];
+  var ordens   = [];
+
   return (
     <>
       <Header />
       <InfoTab />
       <Routes>
         <Route path="/" element={<Body />}/>
-        <Route path="info-cliente" element={<InfoCliente />}/>
-        <Route path="info-cliente/selecionar-servicos" element={<SelecionaServico />}/>
-        <Route path="servicos" element={<Servicos />}/>
-        <Route path="ordens" element={<Ordens />}/>
+        <Route path="info-cliente" element={<InfoCliente clientes={clientes} />}/>
+        <Route path="info-cliente/selecionar-servicos" element={<SelecionaServico servicos={servicos} ordens={ordens} cliente={clientes[clientes.length - 1]} />}/>
+        <Route path="servicos" element={<Servicos servicos={servicos}/>}/>
+        <Route path="ordens" element={<Ordens servicos={servicos} ordens={ordens} clientes={clientes}/>}/>
       </Routes>
       <Footer />
     </>

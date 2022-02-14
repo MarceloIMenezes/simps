@@ -1,7 +1,19 @@
-function Ordens() {
-    return (
-        <div>ORDENS kk</div>
-    );
-}
+import React from 'react'
+export default class Ordens extends React.Component {
+    constructor(props) {
+        super(props);
 
-export default Ordens;
+        this.state = {
+            
+            ordens: this.props.ordens
+        }
+    }
+
+    render() {
+        return (
+        <div>
+
+        </div>
+        );
+    }
+}
