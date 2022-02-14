@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gray: white;
+    --gray-500: #808080;
+    --dark-red: #710c04;
+    --red: #a91b0d;
+
+}
+
+body {
+    background-color: var(--gray);
+}
+
+body, textarea {
+    font: 500 1rem sans-serif;
+    color: var(--gray-500);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}

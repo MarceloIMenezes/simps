@@ -1,0 +1,12 @@
+.infoTabStyle {
+    content: '';
+    height: 4rem;
+    width: 100%;
+    display: inline-block;
+    background-color: var(--red);
+    display: flex;
+    color: white;
+    font-size: x-large;
+    font-family: sans-serif;
+    align-items: center; 
+}

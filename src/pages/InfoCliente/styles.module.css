@@ -1,0 +1,20 @@
+.box {
+	background-color:transparent;
+    width: 100vw;
+    height: 75vh;
+	display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.center {
+    width: 80vw;
+    height: 65vh;
+	background-color: var(--red);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+	border-radius:24px;
+}
