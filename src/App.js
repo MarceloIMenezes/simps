@@ -28,7 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Body />}/>
         <Route path="info-cliente" element={<InfoCliente clientes={clientes} />}/>
-        <Route path="info-cliente/selecionar-servicos" element={<SelecionaServico servicos={servicos} ordens={ordens} cliente={clientes[clientes.length - 1]} />}/>
+        <Route path="info-cliente/selecionar-servicos" element={<SelecionaServico servicos={servicos} ordens={ordens} cliente={clientes} />}/>
         <Route path="servicos" element={<Servicos servicos={servicos}/>}/>
         <Route path="ordens" element={<Ordens servicos={servicos} ordens={ordens} clientes={clientes}/>}/>
       </Routes>

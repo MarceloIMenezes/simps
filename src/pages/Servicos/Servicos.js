@@ -9,7 +9,7 @@ export default class Servicos extends React.Component {
             id: 0,
             descricao: "",
             preco: "",
-            selecionado: false,
+            selected: false,
             servicosLocal: this.props.servicos
         };
     }

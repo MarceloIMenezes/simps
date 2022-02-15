@@ -1,0 +1,30 @@
+.inputOrdens {
+    background-color: transparent;
+    border: 2px solid white;
+    margin-top: 2px;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    width: 95%;
+    height: 95%;
+}
+
+.concluiOrdem {
+    background:linear-gradient(to bottom, var(--red) 5%, var(--dark-red) 100%);
+	background-color:var(--dark-red);
+	border:0.2rem solid white;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-weight:bold;
+	padding:14px 24px;
+	text-decoration:none;
+    margin-left: 12rem;
+    margin-top: 1rem;
+    width: 15%;
+}
+
+.concluiOrdem:hover {
+    background:linear-gradient(to bottom, var(--dark-red)  5%, var(--red) 100%);
+	background-color:var(--red);
+}

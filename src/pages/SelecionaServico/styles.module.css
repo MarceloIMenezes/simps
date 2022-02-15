@@ -29,3 +29,18 @@
     background:linear-gradient(to bottom, var(--dark-red)  5%, var(--red) 100%);
 	background-color:var(--red);
 }
+
+.preco {
+    background-color: var(--dark-red);
+    width: 15rem;
+    height: 3rem;
+    margin-left: 12rem;
+    margin-top: 1rem;
+    border:0rem solid white;
+	border-radius:42px;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0.8rem;
+}

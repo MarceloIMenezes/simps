@@ -1,13 +1,16 @@
 import React from "react";
 import styles from "./styles.module.css";
+import {Link} from "react-router-dom"
 export default class SelecionaServico extends React.Component {
   constructor(props) {
     super(props);
+    this.clientes = this.props.cliente;
     this.state = {
       servicos: this.props.servicos,
       MasterChecked: false,
       servicosSelecionados: [],
-      cliente: this.props.cliente
+      cliente: this.clientes[this.clientes.length - 1],
+      selected: false,
     };
   }
 
@@ -49,11 +52,14 @@ export default class SelecionaServico extends React.Component {
 
   // Event to get selected rows(Optional)
   getSelectedRows() {
+    var tamanho = this.state.servicosSelecionados.length;
+    
     this.setState({
       servicosSelecionados: this.state.servicos.filter((e) => e.selected),
     });
-    if (this.state.servicosSelecionados.length > 0)
-        this.props.ordens.push(this.state);
+    if (tamanho > 0) {
+      this.props.ordens.push(this.state);
+    }
   }
 
   precoTotal() {
@@ -62,6 +68,10 @@ export default class SelecionaServico extends React.Component {
         preco += parseInt(this.state.servicosSelecionados[i].preco);
       }
       return preco;
+  }
+
+  valid() {
+    return (this.state.servicosSelecionados.length > 0)
   }
 
   render() {
@@ -102,13 +112,14 @@ export default class SelecionaServico extends React.Component {
                 ))}
               </tbody>
             </table>
-            <button
-              className={styles.registraOrdem}
-              onClick={() => this.getSelectedRows()}
-            >
-              Registra Ordem: {this.state.servicosSelecionados.length} 
-            </button>
-            <div>
+            <Link to={this.valid() ? "/ordens" : "#"} >
+              <button
+                className={styles.registraOrdem}
+                onClick={() => this.getSelectedRows()}>
+                Registra Ordem: {this.state.servicosSelecionados.length} 
+              </button>
+            </Link>
+            <div className={styles.preco}>
                 Preço Total: {this.precoTotal()}
             </div>
           </div>
